@@ -10,9 +10,9 @@
 
 [Boundary Condtion - CORRECT](#alien-boundary-condition---correct)
 
-[What is CLEAN Unit Test ?](#)
+[What is CLEAN Unit Test ?](#what-is-clean-unit-test-)
 
-[그외 고려할 점](#)
+[그외 고려할 점](#그외-고려할-점)
 
 &nbsp;
 
@@ -254,13 +254,13 @@ ex. 최근 순 주문 10개씩 전송하는 프로그램 - 언제 전송해야 �
 
 &nbsp;
 
-#### Fast
+####  Fast
 
 unit test는 실행속도가 빨라야 함. 그래야 자주 실행해보고 확인할 수 있다.
 
 &nbsp;
 
-#### Independent 
+####  Independent 
 
 unit test는 각 test method가 독립적이어야 한다. 즉, 서로에게 영향을 주거나 상호의존적이면 안된다.
 
@@ -272,7 +272,7 @@ test 하는 목적이 error의 위치를 쉽게 파악하기 위함인데 이러
 
 &nbsp;
 
-#### Repeatable
+####  Repeatable
 
 어떤 환경에서든 repeatable해야 한다. (반복해서 실행할 수 있어야 한다)
 
@@ -280,7 +280,7 @@ test 하는 목적이 error의 위치를 쉽게 파악하기 위함인데 이러
 
 &nbsp;
 
-#### Self-Output
+####  Self-Output
 
 test는 boolean output을 내야 함 - **pass** or **fail**
 
@@ -288,7 +288,7 @@ Test 성공했는지 여부를 성공/실패로 알아야지 log 파일을 매�
 
 &nbsp;
 
-#### Timely 
+####  Timely 
 
 시기적절하게.. happens at a moment when it's useful, effective, or relevant
 
@@ -300,7 +300,7 @@ Test code 작성 후, production code 작성!
 
 &nbsp;
 
-##그외 고려할 점
+## 그외 고려할 점
 
 #### Single Assert Rule
 
@@ -311,7 +311,7 @@ Test code 작성 후, production code 작성!
 
 &nbsp;
 
-###Single concept per Test
+### Single concept per Test
 
 - independent 특성과 일맥상통하는 개념
 - 한 test는 한가지 개념의 test만 하도록!
@@ -331,7 +331,7 @@ Test code 작성 후, production code 작성!
 
 &nbsp;
 
-##Reference
+## Reference
 
 - _Clean Code by Robert.C.Martin_
 
