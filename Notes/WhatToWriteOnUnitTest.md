@@ -4,17 +4,19 @@
 
 ### :pushpin: ​목차
 
-[What is Unit Test?](#)
+[What is Unit Test?](#white_check_mark-what-is-unit-test-)
 
-[What to Test?: Right - BICEP](#)
+[What to Test?: Right - BICEP](#confused-what-to-test-----right---bicep)
 
-[Boundary Condtion](#)
+[Boundary Condtion - CORRECT](#alien-boundary-condition---correct)
 
 [What is CLEAN Unit Test ?](#)
 
 [그외 고려할 점](#)
 
+&nbsp;
 
+&nbsp;
 
 ## :white_check_mark: What is Unit Test ?
 
@@ -25,7 +27,9 @@
 
 - 왜 unit ? 의미 있는 단위의 코드를 대상으로 test 를 하기 때문이다.
 
+&nbsp;
 
+&nbsp;
 
 ## :confused: What to TEST ? :   Right - BICEP
 
@@ -33,7 +37,7 @@
 
 '**무엇을 테스트해야 하는가?**' 에서 '**무엇**'을 생각나게 해줄 질문들 
 
-
+&nbsp;
 
 ### :o: ​Right - 결과가 내가 의도한 것과 맞을까? 
 
@@ -50,7 +54,7 @@
   - 수정중인 시스템, 코드라면 테스트 데이터가 테스트 대상 코드보다 정확하지 않을 가능성이 높다.
   - 해당 테스트 데이터에서 실패가 나온다면, 코드를 보기 전에 데이터가 유효한지 먼저 확인해야 한다.
 
-
+&nbsp;
 
 ### :straight_ruler: ​Boundary Condition - 경계 조건에서 잘 동작할까?
 
@@ -62,7 +66,7 @@
  - 0으로 나누는 상황
  - array index boundary 등등...
 
-
+&nbsp;
 
 가능한 경계조건을 떠올릴 때, **CORRECT** 만 기억하자! :star:
 
@@ -76,7 +80,7 @@
 
 (자세한 CORRECT 항목에 대한 내용은 밑에 있다)
 
-
+&nbsp;
 
 ### :left_right_arrow: Inverse 역관계 확인 - 반대로 해서 처음의 값이 나올까?
 
@@ -104,7 +108,7 @@
 
 - 유의할 점 : 두 루틴의 공통 에러가 있을 수 있음에 유의
 
-
+&nbsp;
 
 ### :negative_squared_cross_mark: Cross-check 교차확인 - 다른 방법도 내 메소드랑 같은 값을 낼까?
 
@@ -143,17 +147,17 @@ Test 대상 메소드 이외의 다른 방법으로 구하는 메소드를 사�
 
 에러 조건을 강제로 만들어 내어, 해당 상황에서 적절히 핸들링, 처리 되는지 확인하는 방법
 
+&nbsp;
 
-
-
+&nbsp;
 
 ## :alien: Boundary condition - CORRECT
 
 경계 값 케이스를 좀더 세분화 해서 질문해보기
 
+&nbsp;
 
-
-#### 형식 일치 Conformance
+###형식 일치 Conformance
 
 특정 형식을 따르는 데이터를 형식에 맞게 처리하거나 생성할 수 있을까?
 
@@ -165,9 +169,9 @@ Test 대상 메소드 이외의 다른 방법으로 구하는 메소드를 사�
   - email 형식 데이터 - @의 위치를 기준으로 문자열 파싱하기, @가 없는 경우… 
   - ladder game - player 이름 쉼표,로 구분하여 입력 받기, 파싱 후 이름배열에 공백이 있는 경우..
 
+&nbsp;
 
-
-#### 순서 Ordering
+###순서 Ordering
 
 큰 데이터 모음에서 의도한 순서나 위치대로 데이터가 들어가는가?
 
@@ -187,9 +191,9 @@ Test 대상 메소드 이외의 다른 방법으로 구하는 메소드를 사�
 
   - 정렬된 상태로 항상 유지되어야 하는 데이터라면, 제대로 된 순서로 정렬되어 있는지 검증하는 테스트가 필요하다.
 
+&nbsp;
 
-
-#### 범위 Range
+###범위 Range
 
 해당 변수가 의도에 맞는 범위의 값만 가지는가?
 
@@ -201,9 +205,9 @@ Test 대상 메소드 이외의 다른 방법으로 구하는 메소드를 사�
 
   좋은 객체 지향 설계에서는 이런 경우 단순히 기본형을 사용하지 않고 범위를 의도한대로 유지해주는 코드가 구현되어 있어야 한다.
 
+&nbsp;
 
-
-####참조 Reference
+###참조 Reference
 
 메서드가 자신이 속한 객체가 아닌, 외부의 객체를 참조할 경우 해당 메서드가 제대로 동작할까?
 
@@ -213,9 +217,9 @@ Test 대상 메소드 이외의 다른 방법으로 구하는 메소드를 사�
   - ResultView에서는 이미 생성된 LadderGame 객체를 참조한다 - LadderGame객체가 생성되지 않았다면?
   - 웹 어플리케이션에서 고객 정보를 보여주려면 일단 고객이 먼저 로그인해 있는 상태를 기대한다.
 
+&nbsp;
 
-
-#### 존재성 Existence
+###존재성 Existence
 
 "주어진 것이 존재하는가?"
 
@@ -224,9 +228,9 @@ Test 대상 메소드 이외의 다른 방법으로 구하는 메소드를 사�
 - Example
   - InputView 에서 return 받은 player 이름 담긴 배열이 빈 배열이라면?
 
+&nbsp;
 
-
-#### 개체 수 Cardinality
+###개체 수 Cardinality
 
 개수 세기
 
@@ -234,27 +238,27 @@ ex. player가 n명일 때, ladder의 step 개수는 n-1이어야 한다.
 
 ex. 최근 순 주문 10개씩 전송하는 프로그램 - 언제 전송해야 하는지, 10개가 안채워져도 전송할 수 있는 지 등...
 
+&nbsp;
 
-
-#### 시간 Time
+###시간 Time
 
 메서드들 순서가 뒤섞여 호출시에 어떤 일이 일어날까?
 
+&nbsp;
 
-
-
+&nbsp;
 
 ## What is CLEAN Unit Test ?
 
 좋은, clean한 unit test의 특성 - **FIRST**
 
-
+&nbsp;
 
 #### Fast
 
 unit test는 실행속도가 빨라야 함. 그래야 자주 실행해보고 확인할 수 있다.
 
-
+&nbsp;
 
 #### Independent 
 
@@ -266,7 +270,7 @@ unit test는 각 test method가 독립적이어야 한다. 즉, 서로에게 영
 
 test 하는 목적이 error의 위치를 쉽게 파악하기 위함인데 이러면 test하는 의미가 없다.
 
-
+&nbsp;
 
 #### Repeatable
 
@@ -274,7 +278,7 @@ test 하는 목적이 error의 위치를 쉽게 파악하기 위함인데 이러
 
 니 컴에서 안돼? 내 컴에서는 되는데? :x: 
 
-
+&nbsp;
 
 #### Self-Output
 
@@ -282,7 +286,7 @@ test는 boolean output을 내야 함 - **pass** or **fail**
 
 Test 성공했는지 여부를 성공/실패로 알아야지 log 파일을 매번 확인해서 알 수 있으면 **망**:poop:이라는 뜻
 
-
+&nbsp;
 
 #### Timely 
 
@@ -294,7 +298,7 @@ Test code 작성 후, production code 작성!
 
 순서가 바뀌면 production code가 test 불가능한 코드가 되어있을 수도 있다..
 
-
+&nbsp;
 
 ##그외 고려할 점
 
@@ -305,14 +309,14 @@ Test code 작성 후, production code 작성!
 - 좋은 가이드라인이 될 수 있다
 - assert를 최소화 하는 노력으로 실천 가능
 
-
+&nbsp;
 
 ###Single concept per Test
 
 - independent 특성과 일맥상통하는 개념
 - 한 test는 한가지 개념의 test만 하도록!
 
-
+&nbsp;
 
 ### Clean test
 
@@ -323,9 +327,9 @@ Test code 작성 후, production code 작성!
 - all about Readability
   가독성이 좋아진다면 계속해서 유지하고 제 기능을 하는 test code를 사용할 수 있을 것
 
+&nbsp;
 
-
-
+&nbsp;
 
 ##Reference
 
